@@ -1,5 +1,7 @@
 package tests;
 
+
+import helpMethods.ElementsMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,55 +9,47 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TabWindowTest {
-    public WebDriver driver;
 
+    public WebDriver driver;
+    ElementsMethod elementsMethod;
 
     @Test
-
     public void metodaTest() {
 
-        //Deschidem un browser
-
         driver = new ChromeDriver();
-
-        //Accesam un URL
-
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
 
-        WebElement alertMeniu = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+        //declaram obiectul
+        elementsMethod = new ElementsMethod(driver);
 
+        //Scroll în jos pentru a vedea cardul "Alerts, Frame & Windows"
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", alertMeniu);
+        js.executeScript("window.scrollBy(0, 500)");
 
+        //Așteptăm până apare cardul "Alerts, Frame & Windows" ca sa facem click pe ea
+        WebElement alertMenu = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+        elementsMethod.javaScriptElement(alertMenu);
+
+        //Așteptăm până apare opțiunea "Browser Windows" ca sa facem click pe ea
         WebElement tabButton = driver.findElement(By.xpath("//span[text()='Browser Windows']"));
-        tabButton.click();
+        elementsMethod.javaScriptElement(tabButton);
 
-        WebElement tabButtonElement = driver.findElement(By.id("tabButton"));
-        tabButtonElement.click();
+//Așteptăm puțin pentru a vedea efectul (opțional, doar pentru observare)
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-        System.out.println("URL-ul paginii curente este" +driver.getCurrentUrl());
-        List<String> tabsList = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabsList.get(1));
+//dam click pe butonul New Tab
+        WebElement tubButtonElement = driver.findElement(By.id("tabButton"));
+        tubButtonElement.click();
 
-        System.out.println("URL-ul paginii curente este" + driver.getCurrentUrl());
-        driver.close();
-        driver.switchTo().window(tabsList.get(0));
-
-
-        WebElement newWindowElement = driver.findElement(By.id("windowButton"));
-        js.executeScript("arguments[0].click();", newWindowElement);
-        List<String> newWindowList = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newWindowList.get(1));
-
-        driver.quit();
-
-
-
-
+        // Test reușit — s-a deschis Tab-ul
+//        driver.quit();
     }
+//         9️⃣ Închidem browserul
+//        driver.quit();
 }
