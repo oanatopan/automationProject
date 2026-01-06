@@ -1,11 +1,9 @@
 package helpMethods;
 
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -16,16 +14,16 @@ public class ElementsMethod {
 
     public ElementsMethod(WebDriver driver) {
         this.driver = driver;
-    }
 
+    }
     public void clickElement(WebElement element){
         waitVisibleElement(element);
         element.click();
     }
 
-    public void fillElement(WebElement element, String text){
+    public void fillElement(WebElement element,String text){
         waitVisibleElement(element);
-          element.sendKeys(text);
+        element.sendKeys(text);
     }
 
     public void waitVisibleElement(WebElement element){
@@ -34,13 +32,8 @@ public class ElementsMethod {
     }
 
     public void javaScriptElement(WebElement element){
-        JavascriptExecutor js = ( JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", element);
-    }
-
-    public void selectDropDownElement(WebElement element, String text){
         waitVisibleElement(element);
-        Select select = new Select(element);
-        select.selectByVisibleText(text);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
     }
 }

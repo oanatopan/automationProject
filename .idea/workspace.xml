@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="" />
+    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ElementMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/practiceForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,13 +47,15 @@
     "TestNG.AutomationPracticeTest.metodaTest.executor": "Run",
     "TestNG.Frames.executor": "Run",
     "TestNG.Frames.metodaTest.executor": "Run",
+    "TestNG.PracticeForms.metodaTest.executor": "Run",
     "TestNG.TabWindowTest.metodaTest.executor": "Run",
     "TestNG.WebTableTest.executor": "Run",
     "TestNG.WebTableTest.metodaTest.executor": "Run",
     "TestNG.WebTableTest1.executor": "Run",
     "TestNG.practiceForms.executor": "Run",
     "TestNG.practiceForms.metodaTest.executor": "Run",
-    "git-widget-placeholder": "master",
+    "TestNG.tests.executor": "Run",
+    "git-widget-placeholder": "objectBranch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/topan/IdeaProjects/AutomationTesting/src/test/resources",
     "project.structure.last.edited": "Modules",
@@ -62,42 +72,7 @@
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Frames">
-    <configuration name="AlertTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlertTest.metodaTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="metodaTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.WebTableTest.metodaTest">
     <configuration name="AlertTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <extension name="coverage">
@@ -116,21 +91,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Frames" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FramesTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Frames" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.FramesTest" />
+      <option name="METHOD_NAME" value="metodaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Frames.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PracticeForms.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Frames" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PracticeForms" />
+      <option name="METHOD_NAME" value="metodaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TabWindowTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TabWindowTest" />
+      <option name="METHOD_NAME" value="metodaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTableTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTableTest" />
       <option name="METHOD_NAME" value="metodaTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -141,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Frames" />
-        <item itemvalue="TestNG.Frames.metodaTest" />
+        <item itemvalue="TestNG.WebTableTest.metodaTest" />
+        <item itemvalue="TestNG.TabWindowTest.metodaTest" />
+        <item itemvalue="TestNG.PracticeForms.metodaTest" />
+        <item itemvalue="TestNG.FramesTest.metodaTest" />
         <item itemvalue="TestNG.AlertTest.metodaTest" />
-        <item itemvalue="TestNG.AlertTest" />
-        <item itemvalue="TestNG.AlertTest.metodaTest (1)" />
       </list>
     </recent_temporary>
   </component>
