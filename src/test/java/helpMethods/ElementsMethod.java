@@ -14,15 +14,16 @@ public class ElementsMethod {
 
     public ElementsMethod(WebDriver driver) {
         this.driver = driver;
-
     }
+
     public void clickElement(WebElement element){
         waitVisibleElement(element);
         element.click();
     }
 
-    public void fillElement(WebElement element,String text){
+    public void fillElement(WebElement element, String text){
         waitVisibleElement(element);
+        element.clear();
         element.sendKeys(text);
     }
 

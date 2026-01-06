@@ -34,23 +34,23 @@ public class PracticeForms {
 
         WebElement firstNameElement = driver.findElement(By.id("firstName"));
         String firstName = "Oana";
-        firstNameElement.sendKeys(firstName);
+        elementsMethod.fillElement(firstNameElement, firstName);
 
         WebElement lastNameElement = driver.findElement(By.id("lastName"));
         String lastName = "Topan";
-        lastNameElement.sendKeys(lastName);
+        elementsMethod.fillElement(lastNameElement, lastName);
 
         WebElement userEmailElement = driver.findElement(By.id("userEmail"));
         String userEmail = "oanadanatopan@gmail.com";
-        userEmailElement.sendKeys(userEmail);
+        elementsMethod.fillElement(userEmailElement, userEmail);
 
         WebElement mobileElement = driver.findElement(By.id("userNumber"));
         String mobile = "0745213252";
-        mobileElement.sendKeys(mobile);
+        elementsMethod.fillElement(mobileElement, mobile);
 
 
         WebElement dateOfBirth = driver.findElement(By.id("dateOfBirthInput"));
-        dateOfBirth.click();
+        elementsMethod.clickElement(dateOfBirth);
 
         WebElement monthElement = driver.findElement(By.className("react-datepicker__month-select"));
         Select monthSelect = new Select(monthElement);
@@ -59,14 +59,14 @@ public class PracticeForms {
 
         WebElement yearElement = driver.findElement(By.className("react-datepicker__year-select"));
         Select yearSelect = new Select(yearElement);
-        String yearValue = "2026";
+        String yearValue = "1992";
         yearSelect.selectByVisibleText(yearValue);
 
         String dayValue = "15";
         List<WebElement> daysList = driver.findElements(By.xpath("//div[contains(@class,'react-datepicker__day--0') and not(contains(@class,'outside-month'))]"));
         for (int index = 0; index < daysList.size(); index++) {
             if (daysList.get(index).getText().equals(dayValue)) {
-                daysList.get(index).click();
+                elementsMethod.clickElement(daysList.get(index));
                 break;
             }
         }

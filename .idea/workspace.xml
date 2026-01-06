@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpMethods/AlertsMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Frames.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ElementMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TabWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TabWindowTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/practiceForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +46,14 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "TestNG.AlertTest.executor": "Run",
     "TestNG.AlertTest.metodaTest (1).executor": "Run",
     "TestNG.AlertTest.metodaTest.executor": "Run",
     "TestNG.AutomationPracticeTest.metodaTest.executor": "Run",
     "TestNG.Frames.executor": "Run",
     "TestNG.Frames.metodaTest.executor": "Run",
+    "TestNG.FramesTest.metodaTest.executor": "Run",
     "TestNG.PracticeForms.metodaTest.executor": "Run",
     "TestNG.TabWindowTest.metodaTest.executor": "Run",
     "TestNG.WebTableTest.executor": "Run",
@@ -72,25 +79,7 @@
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.WebTableTest.metodaTest">
-    <configuration name="AlertTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="metodaTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.WebTableTest">
     <configuration name="FramesTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <extension name="coverage">
@@ -145,6 +134,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebTableTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTableTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebTableTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <extension name="coverage">
@@ -165,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebTableTest" />
         <item itemvalue="TestNG.WebTableTest.metodaTest" />
         <item itemvalue="TestNG.TabWindowTest.metodaTest" />
         <item itemvalue="TestNG.PracticeForms.metodaTest" />
         <item itemvalue="TestNG.FramesTest.metodaTest" />
-        <item itemvalue="TestNG.AlertTest.metodaTest" />
       </list>
     </recent_temporary>
   </component>
