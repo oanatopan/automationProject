@@ -1,44 +1,55 @@
 package tests;
 
+
 import helpMethods.ElementsMethod;
-import helpMethods.TabMethods;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import java.time.Duration;
 
 public class TabWindowTest {
 
     public WebDriver driver;
     ElementsMethod elementsMethod;
-    TabMethods tabMethods;
 
     @Test
     public void metodaTest() {
+
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+        //declaram obiectul
         elementsMethod = new ElementsMethod(driver);
-        tabMethods = new TabMethods(driver);
 
-        HomePage homePage = new HomePage(driver);
-        homePage.clickAlertFrameWindow();
+        //Scroll în jos pentru a vedea cardul "Alerts, Frame & Windows"
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 500)");
 
-        WebElement browserWindowsSubMenu = driver.findElement(By.xpath("//span[text()='Browser Windows']"));
-        elementsMethod.javaScriptElement(browserWindowsSubMenu);
+        //Așteptăm până apare cardul "Alerts, Frame & Windows" ca sa facem click pe ea
+        WebElement alertMenu = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+        elementsMethod.javaScriptElement(alertMenu);
 
-        WebElement newTabButton = driver.findElement(By.id("tabButton"));
-        elementsMethod.clickElement(newTabButton);
+        //Așteptăm până apare opțiunea "Browser Windows" ca sa facem click pe ea
+        WebElement tabButton = driver.findElement(By.xpath("//span[text()='Browser Windows']"));
+        elementsMethod.javaScriptElement(tabButton);
 
-        tabMethods.switchSpecificTab(1);
-        tabMethods.closeCurrentTab();
-        tabMethods.switchSpecificTab(0);
+//Așteptăm puțin pentru a vedea efectul (opțional, doar pentru observare)
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-        driver.quit();
+//dam click pe butonul New Tab
+        WebElement tubButtonElement = driver.findElement(By.id("tabButton"));
+        tubButtonElement.click();
+
+        // Test reușit — s-a deschis Tab-ul
+//        driver.quit();
     }
+//         9️⃣ Închidem browserul
+//        driver.quit();
 }
