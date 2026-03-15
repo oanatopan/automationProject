@@ -1,18 +1,14 @@
 package tests;
 
-import helpMethods.ElementsMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-import pages.ElementsPage;
 import pages.HomePage;
-import pages.WebTablesPage;
+import pages.FramesPage;
 import java.time.Duration;
 
-public class WebTableTest {
-
+public class FramesTest {
     public WebDriver driver;
-    public ElementsMethod elementsMethod;
 
     @Test
     public void metodaTest() {
@@ -21,19 +17,12 @@ public class WebTableTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        elementsMethod = new ElementsMethod(driver);
-
         HomePage homePage = new HomePage(driver);
-        homePage.clickElementsMenu();
+        homePage.clickAlertFrameWindow();
 
-
-        ElementsPage elementsPage = new ElementsPage(driver);
-        elementsPage.clickWebTable();
-
-        WebTablesPage webTablesPage = new WebTablesPage(driver);
-        webTablesPage.createProcess();
-        webTablesPage.editProcess();
-        webTablesPage.deleteProcess();
+        FramesPage framesPage = new FramesPage(driver);
+        framesPage.clickFramesButton();
+        framesPage.switchFrames("frame1", "frame2");
 
         driver.quit();
     }

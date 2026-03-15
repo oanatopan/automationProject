@@ -1,76 +1,74 @@
 package tests;
 
-import org.openqa.selenium.*;
+import helpMethods.ElementsMethod;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import pages.HomePage;
 
+import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
-public class practiceForms {
+public class PracticeForms {
 
     public WebDriver driver;
+    public ElementsMethod elementsMethod;
 
     @Test
-
     public void metodaTest() {
-
-        //Deschidem un browser
-
         driver = new ChromeDriver();
-
-        //Accesam un URL
-
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        WebElement formsMeniu = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        elementsMethod = new ElementsMethod(driver);
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", formsMeniu);
+        HomePage homePage = new HomePage(driver);
+        homePage.clickFormsMenu();
 
         WebElement practiceForm = driver.findElement(By.xpath("//span[text()='Practice Form']"));
-        practiceForm.click();
+        elementsMethod.javaScriptElement(practiceForm);
 
         WebElement firstNameElement = driver.findElement(By.id("firstName"));
-        String firstName = "Iulian";
-        firstNameElement.sendKeys(firstName);
+        elementsMethod.fillElement(firstNameElement, "Oana");
 
         WebElement lastNameElement = driver.findElement(By.id("lastName"));
-        String lastName = "Roteliuc";
-        lastNameElement.sendKeys(lastName);
+        elementsMethod.fillElement(lastNameElement, "Topan");
 
         WebElement userEmailElement = driver.findElement(By.id("userEmail"));
-        String userEmail = "roteliuc.iulian@gmail.com";
-        userEmailElement.sendKeys(userEmail);
+        elementsMethod.fillElement(userEmailElement, "oanadanatopan@gmail.com");
 
         WebElement mobileElement = driver.findElement(By.id("userNumber"));
-        String mobile = "0746430354";
-        mobileElement.sendKeys(mobile);
+        elementsMethod.fillElement(mobileElement, "0745213252");
 
-        //Date of birth interaction
-        WebElement dateOfBirth=driver.findElement(By.id("dateOfBirthInput"))   ;
-        dateOfBirth.click();
-        WebElement monthElements= driver.findElement(By.className("react-datepicker__month-select"));
-        Select monthSelect= new Select(monthElements);
-        String monthValue="January";
-         monthSelect.selectByVisibleText(monthValue);
+        WebElement dateOfBirth = driver.findElement(By.id("dateOfBirthInput"));
+        elementsMethod.clickElement(dateOfBirth);
 
-        WebElement yearElements = driver.findElement(By.className("react-datepicker__year-select"));
-        Select yearSelect = new Select(yearElements);
-        String yearValue="January";
-        yearSelect.selectByVisibleText(yearValue);
+        WebElement monthElement = driver.findElement(By.className("react-datepicker__month-select"));
+        elementsMethod.dropDownElement(monthElement, "January");
 
-        String dayValue="15";
-        List<WebElement> daysList= driver.findElements(By.xpath("//div[contains(@class,'react-datepicker__day--0')and not(contains(@class,'outside-month'))]"));
-        for(int index=0;index<daysList.size();index++) {
+        WebElement yearElement = driver.findElement(By.className("react-datepicker__year-select"));
+        elementsMethod.dropDownElement(yearElement, "1992");
+
+        String dayValue = "15";
+        List<WebElement> daysList = driver.findElements(
+                By.xpath("//div[contains(@class,'react-datepicker__day--0') and not(contains(@class,'outside-month'))]")
+        );
+
+        for (int index = 0; index < daysList.size(); index++) {
             if (daysList.get(index).getText().equals(dayValue)) {
-                daysList.get(index).click();
+                elementsMethod.clickElement(daysList.get(index));
                 break;
-
-
-             }
+            }
         }
-    }
 
+        WebElement photoElementField = driver.findElement(By.id("uploadPicture"));
+        File resourcesDirectory = new File("src/test/resources/Catalin.jpg");
+        photoElementField.sendKeys(resourcesDirectory.getAbsolutePath());
+
+        driver.quit();
+    }
 }

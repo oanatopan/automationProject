@@ -1,6 +1,5 @@
 package helpMethods;
 
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,27 +17,49 @@ public class ElementsMethod {
         this.driver = driver;
     }
 
-    public void clickElement(WebElement element){
+    public void clickElement(WebElement element) {
         waitVisibleElement(element);
+        scrollToElement(element);
+        waitClickableElement(element);
         element.click();
     }
 
-    public void fillElement(WebElement element, String text){
+    public void fillElement(WebElement element, String text) {
         waitVisibleElement(element);
-          element.sendKeys(text);
+        scrollToElement(element);
+        element.sendKeys(text);
     }
 
-    public void waitVisibleElement(WebElement element){
+    public void clearAndFillElement(WebElement element, String text) {
+        waitVisibleElement(element);
+        scrollToElement(element);
+        element.clear();
+        element.sendKeys(text);
+    }
+
+    public void waitVisibleElement(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void javaScriptElement(WebElement element){
-        JavascriptExecutor js = ( JavascriptExecutor) driver;
+    public void waitClickableElement(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+    }
+
+    public void javaScriptElement(WebElement element) {
+        waitVisibleElement(element);
+        scrollToElement(element);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void selectDropDownElement(WebElement element, String text){
+    public void dropDownElement(WebElement element, String text) {
         waitVisibleElement(element);
         Select select = new Select(element);
         select.selectByVisibleText(text);
