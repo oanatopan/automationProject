@@ -1,4 +1,3 @@
-
 package helpMethods;
 
 import org.openqa.selenium.Alert;

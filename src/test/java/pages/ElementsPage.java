@@ -1,18 +1,14 @@
 package pages;
 
-import helpMethods.ElementsMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ElementsPage {
-    public WebDriver driver;
-    public ElementsMethod elementsMethod;
+public class ElementsPage extends BasePage {
 
     public ElementsPage(WebDriver driver) {
-        this.driver = driver;
-        this.elementsMethod = new ElementsMethod(this.driver);
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -20,6 +16,6 @@ public class ElementsPage {
     public WebElement webTableSubMenu;
 
     public void clickWebTable() {
-        elementsMethod.clickElement(webTableSubMenu);
+        elementsMethods.javaScriptElement(webTableSubMenu);
     }
 }

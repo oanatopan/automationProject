@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="" />
+    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/AlertsMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TabWindowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TabWindowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebTableTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "oanatopan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/oanatopan/automationProject.git",
+    "accountId": "407cedf1-3e7a-4a90-9a8c-fbb2fe8a18d3"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -33,25 +61,30 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "TestNG.AlertTest.executor": "Run",
     "TestNG.AlertTest.metodaTest (1).executor": "Run",
     "TestNG.AlertTest.metodaTest.executor": "Run",
     "TestNG.AutomationPracticeTest.metodaTest.executor": "Run",
     "TestNG.Frames.executor": "Run",
     "TestNG.Frames.metodaTest.executor": "Run",
+    "TestNG.PracticeForms.metodaTest.executor": "Run",
     "TestNG.TabWindowTest.metodaTest.executor": "Run",
     "TestNG.WebTableTest.executor": "Run",
     "TestNG.WebTableTest.metodaTest.executor": "Run",
     "TestNG.WebTableTest1.executor": "Run",
     "TestNG.practiceForms.executor": "Run",
     "TestNG.practiceForms.metodaTest.executor": "Run",
+    "TestNG.tests.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/topan/IdeaProjects/AutomationTesting/src/test/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,7 +95,7 @@
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Frames">
+  <component name="RunManager" selected="TestNG.tests">
     <configuration name="AlertTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <extension name="coverage">
@@ -80,42 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlertTest.metodaTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="metodaTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlertTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertTest" />
-      <option name="METHOD_NAME" value="metodaTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Frames" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <option name="PACKAGE_NAME" value="" />
@@ -127,10 +124,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Frames.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PracticeForms.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Frames" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PracticeForms" />
       <option name="METHOD_NAME" value="metodaTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -139,15 +142,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebTableTest.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTableTest" />
+      <option name="METHOD_NAME" value="metodaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Frames" />
-        <item itemvalue="TestNG.Frames.metodaTest" />
-        <item itemvalue="TestNG.AlertTest.metodaTest" />
+        <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.PracticeForms.metodaTest" />
         <item itemvalue="TestNG.AlertTest" />
-        <item itemvalue="TestNG.AlertTest.metodaTest (1)" />
+        <item itemvalue="TestNG.WebTableTest.metodaTest" />
+        <item itemvalue="TestNG.Frames" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -156,7 +201,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762053221726</updated>
+      <workItem from="1773624848675" duration="7104000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java">
+      <option name="closed" value="true" />
+      <created>1773580711615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773580711615</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactorizare" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java" />
   </component>
 </project>
