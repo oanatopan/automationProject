@@ -13,12 +13,12 @@ public class TabMethods {
         this.driver = driver;
     }
 
-    public void switchSpecificTab(int index) {
+    public void switchSpecificTab (int index){
         List<String> tabsList = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabsList.get(index));
     }
 
-    public void closeCurrentTab(){
+    public void closeCurrentTab (){
         driver.close();
     }
 }

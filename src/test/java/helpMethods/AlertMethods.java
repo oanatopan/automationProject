@@ -2,6 +2,7 @@ package helpMethods;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -16,8 +17,7 @@ public class AlertMethods {
         this.driver = driver;
     }
 
-    public void fillAlert(String text){
-        waitForAlert();
+    public void fillAlert (String text){
         Alert fourthAlert = driver.switchTo().alert();
         fourthAlert.sendKeys(text);
         fourthAlert.accept();
@@ -26,7 +26,6 @@ public class AlertMethods {
     public void waitForAlert(){
         WebDriverWait waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(10));
         waitExplicit.until(ExpectedConditions.alertIsPresent());
-
     }
 
     public void acceptAlert(){
@@ -39,8 +38,8 @@ public class AlertMethods {
         waitForAlert();
         Alert secondAlertElement = driver.switchTo().alert();
         secondAlertElement.dismiss();
-
     }
+
     public void verifyConfirmAlert(String actualText, boolean chooseAccept){
         if (chooseAccept) {
             Assert.assertEquals(actualText, "You selected Ok");
@@ -50,6 +49,7 @@ public class AlertMethods {
             System.out.println("User selected Cancel");
         }
     }
+
     public void acceptAlert(boolean chooseAccept){
         Alert thirdAlert = driver.switchTo().alert();
         if (chooseAccept) {

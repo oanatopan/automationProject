@@ -13,37 +13,37 @@ public class PracticeForms extends SharedData {
     @Test
     public void metodaTest() {
 
-        elementsMethod = new ElementsMethod(driver);
+        elementsMethod = new ElementsMethod(getDriver());
 
-        WebElement formsMenu = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        WebElement formsMenu = getDriver().findElement(By.xpath("//h5[text()='Forms']"));
         elementsMethod.javaScriptElement(formsMenu);
 
-        WebElement practiceForm = driver.findElement(By.xpath("//span[text()='Practice Form']"));
+        WebElement practiceForm = getDriver().findElement(By.xpath("//span[text()='Practice Form']"));
         elementsMethod.clickElement(practiceForm);
 
-        WebElement firstNameElement = driver.findElement(By.id("firstName"));
+        WebElement firstNameElement = getDriver().findElement(By.id("firstName"));
         elementsMethod.fillElement(firstNameElement, "Oana");
 
-        WebElement lastNameElement = driver.findElement(By.id("lastName"));
+        WebElement lastNameElement = getDriver().findElement(By.id("lastName"));
         elementsMethod.fillElement(lastNameElement, "Topan");
 
-        WebElement userEmailElement = driver.findElement(By.id("userEmail"));
+        WebElement userEmailElement = getDriver().findElement(By.id("userEmail"));
         elementsMethod.fillElement(userEmailElement, "oanatopan@gmail.com");
 
-        WebElement mobileElement = driver.findElement(By.id("userNumber"));
+        WebElement mobileElement = getDriver().findElement(By.id("userNumber"));
         elementsMethod.fillElement(mobileElement, "0745213252");
 
-        WebElement dateOfBirth = driver.findElement(By.id("dateOfBirthInput"));
+        WebElement dateOfBirth = getDriver().findElement(By.id("dateOfBirthInput"));
         elementsMethod.clickElement(dateOfBirth);
 
-        WebElement monthElement = driver.findElement(By.className("react-datepicker__month-select"));
+        WebElement monthElement = getDriver().findElement(By.className("react-datepicker__month-select"));
         elementsMethod.dropDownElement(monthElement, "January");
 
-        WebElement yearElement = driver.findElement(By.className("react-datepicker__year-select"));
+        WebElement yearElement = getDriver().findElement(By.className("react-datepicker__year-select"));
         elementsMethod.dropDownElement(yearElement, "2030");
 
         String dayValue = "15";
-        List<WebElement> daysList = driver.findElements(By.xpath("//div[contains(@class,'react-datepicker__day--0') and not(contains(@class,'outside-month'))]"));
+        List<WebElement> daysList = getDriver().findElements(By.xpath("//div[contains(@class,'react-datepicker__day--0') and not(contains(@class,'outside-month'))]"));
         for (int index = 0; index < daysList.size(); index++) {
             if (daysList.get(index).getText().equals(dayValue)) {
                 elementsMethod.clickElement(daysList.get(index));
@@ -72,7 +72,7 @@ public class PracticeForms extends SharedData {
 //                break;
 //        }
 //
-//        WebElement subjectElementField = driver.findElement(By.id("subjectsInput"));
+//        WebElement subjectElementField = getdriver.findElement(By.id("subjectsInput"));
 //        String subjectValue = "Accounting";
 //        subjectElement.sendKeys(subjectValue);
 //        subjectElement.sendKeys(Keys.ENTER);
@@ -84,16 +84,16 @@ public class PracticeForms extends SharedData {
 
 //        }
 //        List<String> hobbiesElements = Arrays.asList("Sports", "Reading");
-//        List<WebElement> hobbiesCheckList = driver.findElements(By.xpath("//input[@type='checkbox']"));
+//        List<WebElement> hobbiesCheckList = getdriver.findElements(By.xpath("//input[@type='checkbox']"));
 //        for (int index = 0; index < hobbiesElements.size(); index++) {
 //            js.executeScript("arguments[0].click();", hobbiesCheckList.get(index));
 //        }
-//        WebElement photoElementField = driver.findElement(By.id("uploadPicture"));
+//        WebElement photoElementField = getdriver.findElement(By.id("uploadPicture"));
 //        File resourcesDirectory = new File("src/test/resources/istockphoto-1313456479-2048x2048.jpg");
 //        photoElementField.sendKeys(resourcesDirectory.getAbsolutePath());
 //
 //// Găsim dropdownul "Select State" și îl aducem în view
-//        WebElement stateElement = driver.findElement(By.xpath("//div[@id='state']//div[contains(@class,'-placeholder') or contains(@class,'-singleValue')]"));
+//        WebElement stateElement = getdriver.findElement(By.xpath("//div[@id='state']//div[contains(@class,'-placeholder') or contains(@class,'-singleValue')]"));
 //        js.executeScript("arguments[0].click();", stateElement);
 //
 //// Click pe dropdown ca să se deschidă și să apară inputul ascuns

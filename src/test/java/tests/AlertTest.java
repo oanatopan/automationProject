@@ -2,8 +2,6 @@ package tests;
 
 import helpMethods.AlertMethods;
 import helpMethods.ElementsMethod;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import pages.AlertWindows;
 import pages.HomePage;
@@ -19,13 +17,13 @@ public class AlertTest extends SharedData {
 
     public void metodaTest() {
 
-        elementsMethod = new ElementsMethod(driver);
-        alertMethods = new AlertMethods(driver);
+        elementsMethod = new ElementsMethod(getDriver());
+        alertMethods = new AlertMethods(getDriver());
 
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(getDriver());
         homePage.clickAlertFrameWindow();
 
-        AlertWindows alertWindows = new AlertWindows(driver);
+        AlertWindows alertWindows = new AlertWindows(getDriver());
         alertWindows.clickAlert();
         alertWindows.dealAlertProcess();
 

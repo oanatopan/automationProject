@@ -16,50 +16,25 @@ public class ElementsMethod {
     public ElementsMethod(WebDriver driver) {
         this.driver = driver;
     }
-
-    public void clickElement(WebElement element) {
+    public void clickElement(WebElement element){
         waitVisibleElement(element);
-        scrollToElement(element);
-        waitClickableElement(element);
         element.click();
     }
-
-    public void fillElement(WebElement element, String text) {
+    public void fillElement(WebElement element, String text){
         waitVisibleElement(element);
-        scrollToElement(element);
         element.sendKeys(text);
     }
-
-    public void clearAndFillElement(WebElement element, String text) {
-        waitVisibleElement(element);
-        scrollToElement(element);
-        element.clear();
-        element.sendKeys(text);
-    }
-
-    public void waitVisibleElement(WebElement element) {
+    public void waitVisibleElement(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-
-    public void waitClickableElement(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
-    }
-
-    public void javaScriptElement(WebElement element) {
+    public void javaScriptElement(WebElement element){
         waitVisibleElement(element);
-        scrollToElement(element);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void dropDownElement(WebElement element, String text) {
+    public void dropDownElement (WebElement element, String text){
         waitVisibleElement(element);
         Select select = new Select(element);
         select.selectByVisibleText(text);

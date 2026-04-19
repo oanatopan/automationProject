@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" afterDir="false" />
+    <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="shared Data">
+      <change afterPath="$PROJECT_DIR$/RegressionSuite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SmokeSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/AlertsMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FramesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FramesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
@@ -36,18 +40,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "oanatopan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;oanatopan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/oanatopan/automationProject.git",
-    "accountId": "407cedf1-3e7a-4a90-9a8c-fbb2fe8a18d3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/oanatopan/automationProject.git&quot;,
+    &quot;accountId&quot;: &quot;407cedf1-3e7a-4a90-9a8c-fbb2fe8a18d3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -56,42 +60,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "TestNG.AlertTest.executor": "Run",
-    "TestNG.AlertTest.metodaTest (1).executor": "Run",
-    "TestNG.AlertTest.metodaTest.executor": "Run",
-    "TestNG.AutomationPracticeTest.metodaTest.executor": "Run",
-    "TestNG.Frames.executor": "Run",
-    "TestNG.Frames.metodaTest.executor": "Run",
-    "TestNG.PracticeForms.metodaTest.executor": "Run",
-    "TestNG.TabWindowTest.metodaTest.executor": "Run",
-    "TestNG.WebTableTest.executor": "Run",
-    "TestNG.WebTableTest.metodaTest.executor": "Run",
-    "TestNG.WebTableTest1.executor": "Run",
-    "TestNG.practiceForms.executor": "Run",
-    "TestNG.practiceForms.metodaTest.executor": "Run",
-    "TestNG.tests.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/topan/IdeaProjects/AutomationTesting/src/test/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;TestNG.AlertTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AlertTest.metodaTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AlertTest.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutomationPracticeTest.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForms.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TabWindowTest.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTableTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTableTest.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTableTest1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.practiceForms.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.practiceForms.metodaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.tests.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/topan/IdeaProjects/AutomationTesting/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\19oan\IdeaProjects\ProiecteNou\automationProject" />
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test" />
     </key>
   </component>
@@ -113,17 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Frames" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationTesting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Frames" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PracticeForms.metodaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationTesting" />
       <extension name="coverage">
@@ -136,6 +130,23 @@
       <option name="MAIN_CLASS_NAME" value="tests.PracticeForms" />
       <option name="METHOD_NAME" value="metodaTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTableTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WebTableTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -179,10 +190,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.WebTableTest.metodaTest" />
+        <item itemvalue="TestNG.WebTableTest" />
         <item itemvalue="TestNG.PracticeForms.metodaTest" />
         <item itemvalue="TestNG.AlertTest" />
-        <item itemvalue="TestNG.WebTableTest.metodaTest" />
-        <item itemvalue="TestNG.Frames" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +201,6 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -201,7 +211,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762053221726</updated>
-      <workItem from="1773624848675" duration="7104000" />
+      <workItem from="1773624848675" duration="10031000" />
+      <workItem from="1775693608230" duration="202000" />
+      <workItem from="1775694626994" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java">
       <option name="closed" value="true" />
@@ -211,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773580711615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="shared Data">
+      <option name="closed" value="true" />
+      <created>1773633545957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773633545957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +240,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactorizare" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;src/test/java/helpMethods/ElementsMethod.java&#10;#&#9;src/test/java/helpMethods/FrameMethods.java&#10;#&#9;src/test/java/helpMethods/TabMethods.java&#10;#&#9;src/test/java/tests/AlertTest.java&#10;#&#9;src/test/java/tests/FramesTest.java&#10;#&#9;src/test/java/tests/PracticeForms.java&#10;#&#9;src/test/java/tests/TabWindowTest.java&#10;#&#9;src/test/java/tests/WebTableTest.java" />
+    <MESSAGE value="shared Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="shared Data" />
   </component>
 </project>

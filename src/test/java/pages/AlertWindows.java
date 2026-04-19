@@ -2,6 +2,7 @@ package pages;
 
 import helpMethods.AlertMethods;
 import helpMethods.ElementsMethod;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,51 +12,61 @@ public class AlertWindows {
 
     public WebDriver driver;
     public ElementsMethod elementsMethod;
-    public AlertMethods alertMethods;
+    public AlertMethods alertsMethods;
 
     public AlertWindows(WebDriver driver) {
         this.driver = driver;
         elementsMethod = new ElementsMethod(this.driver);
-        alertMethods = new AlertMethods(this.driver);
+        alertsMethods = new AlertMethods(this.driver);
         PageFactory.initElements(this.driver, this);
     }
 
     @FindBy(xpath = "//span[text()='Alerts']")
-    public WebElement alert;
+    private WebElement alert;
 
     @FindBy(id = "alertButton")
-    public WebElement firstAlertElement;
+    private WebElement firstAlertElement;
 
     @FindBy(id = "timerAlertButton")
-    public WebElement secondAlert;
+    private WebElement secondAlert;
 
     @FindBy(id = "confirmButton")
-    public WebElement thirdAlertElement;
+    private WebElement thirdAlertElement;
 
     @FindBy(id = "confirmResult")
-    public WebElement textThirdAlert;
+    private WebElement textThirdAlert;
 
     @FindBy(id = "promtButton")
-    public WebElement fourthAlertElement;
+    private WebElement fourthAlertElement;
 
-    public void clickAlert() {
+    public void clickAlert(){
         elementsMethod.javaScriptElement(alert);
     }
 
-    public void dealAlertProcess() {
-        elementsMethod.clickElement(firstAlertElement);
-        alertMethods.acceptAlert();
+    public void dealAlertProcess(){
+        WebElement firstAlertElement = driver.findElement(By.id("alertButton"));
+        elementsMethod.javaScriptElement(firstAlertElement);
 
-        elementsMethod.clickElement(secondAlert);
-        alertMethods.acceptAlert();
+        alertsMethods.acceptAlert();
 
-        elementsMethod.clickElement(thirdAlertElement);
-        alertMethods.acceptAlert(true);
+        WebElement secondAlert = driver.findElement(By.id("timerAlertButton"));
+        elementsMethod.javaScriptElement(secondAlert);
 
+        alertsMethods.acceptAlert();
+
+        WebElement thirdAlertElement = driver.findElement(By.id("confirmButton"));
+        elementsMethod.javaScriptElement(thirdAlertElement);
+
+        boolean chooseAccept = true;  // pune false daca vrei Cancel
+        alertsMethods.acceptAlert(chooseAccept);
+
+        WebElement textThirdAlert = driver.findElement(By.id("confirmResult"));
         String actualText = textThirdAlert.getText();
-        alertMethods.verifyConfirmAlert(actualText, true);
+        alertsMethods.verifyConfirmAlert(actualText, true);
 
-        elementsMethod.clickElement(fourthAlertElement);
-        alertMethods.fillAlert("Buna ziua");
+        WebElement fourthAlertElement = driver.findElement(By.id("promtButton"));
+        elementsMethod.javaScriptElement(fourthAlertElement);
+        alertsMethods.fillAlert("Buna");
     }
+
 }

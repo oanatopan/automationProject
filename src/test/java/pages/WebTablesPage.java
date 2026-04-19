@@ -1,133 +1,123 @@
 package pages;
 
-import helpMethods.ElementsMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import java.util.List;
-
-public class WebTablesPage {
-
-    public WebDriver driver;
-    public ElementsMethod elementsMethod;
-
-    public WebTablesPage(WebDriver driver) {
-        this.driver = driver;
-        this.elementsMethod = new ElementsMethod(this.driver);
-        PageFactory.initElements(this.driver, this);
-    }
+public class WebTablesPage extends BasePage {
 
     @FindBy(id = "addNewRecordButton")
-    public WebElement addElement;
+    private WebElement addElement;
 
     @FindBy(id = "firstName")
-    public WebElement firstNameElement;
+    private WebElement firstNameElement;
 
     @FindBy(id = "lastName")
-    public WebElement lastNameElement;
+    private WebElement lastNameElement;
 
     @FindBy(id = "userEmail")
-    public WebElement userEmailElement;
+    private WebElement userEmailElement;
 
     @FindBy(id = "age")
-    public WebElement ageElement;
+    private WebElement ageElement;
 
     @FindBy(id = "salary")
-    public WebElement salaryElement;
+    private WebElement salaryElement;
 
     @FindBy(id = "department")
-    public WebElement departmentElement;
+    private WebElement departmentElement;
 
     @FindBy(id = "submit")
-    public WebElement submitButton;
+    private WebElement submitButton;
 
-    @FindBy(id = "edit-record-4")
-    public WebElement editRecordFourElement;
-
-    @FindBy(id = "delete-record-4")
-    public WebElement deleteRecordFourElement;
-
-    @FindBy(xpath = "//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']")
-    public List<WebElement> tableRows;
-
-    public String firstNameValue = "Oana";
-    public String lastNameValue = "Topan";
-    public String emailValue = "oana@test.com";
-    public String ageValue = "30";
-    public String salaryValue = "5000";
-    public String departmentValue = "IT";
-    public String editedFirstNameValue = "OanaEdited";
-
-    public int getActiveRowsCount() {
-        List<WebElement> editButtons = driver.findElements(By.xpath("//span[@title='Edit']"));
-        return editButtons.size();
+    public WebTablesPage(WebDriver driver) {
+        super(driver);
     }
 
     public void createProcess() {
-        int initialSize = getActiveRowsCount();
-        System.out.println("Dimensiunea initiala a tabelului este " + initialSize);
+        String firstName = "Johny";
+        String lastName = "Cash";
+        String userEmail = "johnycash12n@gmail.com";
+        String age = "31";
+        String salary = "5000";
+        String department = "Discogs";
 
-        elementsMethod.clickElement(addElement);
+        System.out.println("STEP: User clicks on Add button.");
+        elementsMethods.clickElement(addElement);
 
-        elementsMethod.fillElement(firstNameElement, firstNameValue);
-        elementsMethod.fillElement(lastNameElement, lastNameValue);
-        elementsMethod.fillElement(userEmailElement, emailValue);
-        elementsMethod.fillElement(ageElement, ageValue);
-        elementsMethod.fillElement(salaryElement, salaryValue);
-        elementsMethod.fillElement(departmentElement, departmentValue);
+        System.out.println("STEP: User fills in First Name field.");
+        elementsMethods.fillElement(firstNameElement, firstName);
 
-        elementsMethod.clickElement(submitButton);
+        System.out.println("STEP: User fills in Last Name field.");
+        elementsMethods.fillElement(lastNameElement, lastName);
 
-        int sizeAfterAdd = getActiveRowsCount();
-        System.out.println("Dimensiunea tabelului dupa adaugare este " + sizeAfterAdd);
+        System.out.println("STEP: User fills in Email field.");
+        elementsMethods.fillElement(userEmailElement, userEmail);
 
-        Assert.assertEquals(sizeAfterAdd, initialSize + 1,
-                "Marimea tabelului dupa adaugare nu a crescut cu 1");
+        System.out.println("STEP: User fills in Age field.");
+        elementsMethods.fillElement(ageElement, age);
 
-        boolean rowFound = false;
+        System.out.println("STEP: User fills in Salary field.");
+        elementsMethods.fillElement(salaryElement, salary);
 
-        for (WebElement row : tableRows) {
-            if (row.getText().contains(firstNameValue) &&
-                    row.getText().contains(lastNameValue)) {
-                rowFound = false;
-                break;
-            }
-        }
+        System.out.println("STEP: User fills in Department field.");
+        elementsMethods.fillElement(departmentElement, department);
 
-        Assert.assertFalse(rowFound, "Randul adaugat apare in tabel");
+        System.out.println("STEP: User clicks Submit button.");
+        elementsMethods.clickElement(submitButton);
+
+        System.out.println("STEP: User validates that the new record is displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(firstName), "First name is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(lastName), "Last name is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(userEmail), "Email is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(age), "Age is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(salary), "Salary is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains(department), "Department is not displayed in table.");
     }
 
     public void editProcess() {
-        elementsMethod.clickElement(editRecordFourElement);
+        WebElement editElement = driver.findElement(By.id("edit-record-4"));
 
-        elementsMethod.clearAndFillElement(firstNameElement, editedFirstNameValue);
-        elementsMethod.clickElement(submitButton);
+        System.out.println("STEP: User clicks Edit button.");
+        elementsMethods.clickElement(editElement);
 
-        boolean rowFound = false;
+        System.out.println("STEP: User clears and updates First Name field.");
+        firstNameElement.clear();
+        elementsMethods.fillElement(firstNameElement, "John");
 
-        for (WebElement row : tableRows) {
-            if (row.getText().contains(editedFirstNameValue)) {
-                rowFound = false;
-                break;
-            }
-        }
+        System.out.println("STEP: User clears and updates Last Name field.");
+        lastNameElement.clear();
+        elementsMethods.fillElement(lastNameElement, "Smith");
 
-        Assert.assertFalse(rowFound, "Prenumele editat nu apare in tabel");
+        System.out.println("STEP: User clears and updates Email field.");
+        userEmailElement.clear();
+        elementsMethods.fillElement(userEmailElement, "johnysmithasd2@conver.com");
+
+        System.out.println("STEP: User clears and updates Age field.");
+        ageElement.clear();
+        elementsMethods.fillElement(ageElement, "50");
+
+        System.out.println("STEP: User clicks Submit button after edit.");
+        elementsMethods.clickElement(submitButton);
+
+        System.out.println("STEP: User validates that edited record is displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains("John"), "Edited first name is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains("Smith"), "Edited last name is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains("johnysmithasd2@conver.com"), "Edited email is not displayed in table.");
+        Assert.assertTrue(driver.getPageSource().contains("50"), "Edited age is not displayed in table.");
     }
 
     public void deleteProcess() {
-        int initialSize = getActiveRowsCount();
+        WebElement deleteElement = driver.findElement(By.id("delete-record-4"));
 
-        elementsMethod.clickElement(deleteRecordFourElement);
+        System.out.println("STEP: User clicks Delete button.");
+        elementsMethods.clickElement(deleteElement);
 
-        int sizeAfterDelete = getActiveRowsCount();
-        System.out.println("Dimensiunea tabelului dupa stergere este " + sizeAfterDelete);
-
-        Assert.assertEquals(sizeAfterDelete, initialSize - 1,
-                "Randul nu a fost sters corect");
+        System.out.println("STEP: User validates that deleted record is no longer displayed in table.");
+        Assert.assertFalse(driver.getPageSource().contains("John"), "Deleted first name is still displayed in table.");
+        Assert.assertFalse(driver.getPageSource().contains("Smith"), "Deleted last name is still displayed in table.");
+        Assert.assertFalse(driver.getPageSource().contains("johnysmithasd2@conver.com"), "Deleted email is still displayed in table.");
     }
 }

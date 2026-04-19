@@ -1,21 +1,16 @@
 package tests;
 
 import helpMethods.ElementsMethod;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ElementsPage;
 import pages.HomePage;
 import pages.WebTablesPage;
 import sharedData.SharedData;
 
-import java.time.Duration;
-
 public class WebTableTest extends SharedData {
 
-    public ElementsMethod elementsMethod;
+    ElementsMethod elementsMethod;
 
     @Test
     public void metodaTest() {
@@ -28,11 +23,12 @@ public class WebTableTest extends SharedData {
         ElementsPage elementsPage = new ElementsPage(driver);
         elementsPage.clickWebTable();
 
-        WebTablesPage webTablesPage = new WebTablesPage(driver);
-        webTablesPage.createProcess();
-        webTablesPage.editProcess();
-        webTablesPage.deleteProcess();
+        System.out.println("STEP: URL curent este: " + driver.getCurrentUrl());
+        Assert.assertTrue(driver.getCurrentUrl().contains("webtables"), "Pagina Web Tables nu s-a deschis.");
 
-        driver.quit();
+        WebTablesPage webTablePage = new WebTablesPage(driver);
+        webTablePage.createProcess();
+        webTablePage.editProcess();
+        webTablePage.deleteProcess();
     }
 }
