@@ -3,23 +3,20 @@ package tests;
 import helpMethods.ElementsMethod;
 import helpMethods.TabMethods;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import sharedData.Hooks;
-import sharedData.SharedData;
-
 
 public class TabWindowTest extends Hooks {
 
     ElementsMethod elementsMethod;
     TabMethods tabMethods;
 
-
     @Test
-
     public void metodaTest() {
+
+        int newTabIndex = 1;
+        int mainTabIndex = 0;
 
         elementsMethod = new ElementsMethod(getDriver());
         tabMethods = new TabMethods(getDriver());
@@ -33,15 +30,12 @@ public class TabWindowTest extends Hooks {
         WebElement newTabButton = getDriver().findElement(By.id("tabButton"));
         elementsMethod.clickElement(newTabButton);
 
-        tabMethods.switchSpecificTab(1);
-
+        tabMethods.switchSpecificTab(newTabIndex);
         tabMethods.closeCurrentTab();
-
-        tabMethods.switchSpecificTab(0);
+        tabMethods.switchSpecificTab(mainTabIndex);
 
         WebElement newWindowElement = getDriver().findElement(By.id("windowButton"));
         elementsMethod.javaScriptElement(newWindowElement);
-        tabMethods.switchSpecificTab(1);
-
+        tabMethods.switchSpecificTab(newTabIndex);
     }
 }

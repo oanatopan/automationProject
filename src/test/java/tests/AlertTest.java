@@ -1,31 +1,23 @@
 package tests;
 
-import helpMethods.AlertMethods;
-import helpMethods.ElementsMethod;
+import modelObject.AlertModel;
 import org.testng.annotations.Test;
 import pages.AlertWindows;
 import pages.HomePage;
 import sharedData.Hooks;
 
-
 public class AlertTest extends Hooks {
 
-    ElementsMethod elementsMethod;
-    AlertMethods alertMethods;
-
     @Test
-
     public void metodaTest() {
 
-        elementsMethod = new ElementsMethod(getDriver());
-        alertMethods = new AlertMethods(getDriver());
+        AlertModel testData = new AlertModel("src/test/resources/inputData/AlertData.json");
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickAlertFrameWindow();
 
         AlertWindows alertWindows = new AlertWindows(getDriver());
         alertWindows.clickAlertSubMenu();
-        alertWindows.dealAlertProcess();
-
+        alertWindows.dealAlertProcess(testData);
     }
 }

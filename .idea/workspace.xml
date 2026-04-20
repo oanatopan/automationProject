@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="shared Data">
-      <change afterPath="$PROJECT_DIR$/src/test/java/loggerUtility/LoggerUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sharedData/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelObject/PracticeFormsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelObject/WebTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/PracticeFormsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/inputData/AlertData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/inputData/PracticeFormsData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/inputData/WebTablesData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WebTablePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sharedData/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sharedData/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PracticeForms.java" afterDir="false" />
@@ -91,6 +94,7 @@
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\19oan\IdeaProjects\ProiecteNou\automationProject\src\test\resources\inputData" />
       <recent name="C:\Users\19oan\IdeaProjects\ProiecteNou\automationProject" />
       <recent name="C:\Users\topan\IdeaProjects\AutomationTesting\src\test" />
     </key>

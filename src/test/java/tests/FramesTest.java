@@ -10,14 +10,10 @@ import sharedData.SharedData;
 
 public class FramesTest extends Hooks {
 
-    ElementsMethod elementsMethod;
-    FrameMethods frameMethods;
 
     @Test
     public void metodaTest() {
 
-        elementsMethod = new ElementsMethod(getDriver());
-        frameMethods = new FrameMethods(getDriver());
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickAlertFrameWindow();

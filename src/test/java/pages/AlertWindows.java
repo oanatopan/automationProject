@@ -1,5 +1,6 @@
 package pages;
 
+import modelObject.AlertModel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,7 +34,7 @@ public class AlertWindows extends BasePage {
         loggerUtility.infoLog("The user clicks on Alert submenu.");
     }
 
-    public void dealAlertProcess() {
+    public void dealAlertProcess(AlertModel testData) {
         elementsMethods.javaScriptElement(firstAlertElement);
         loggerUtility.infoLog("The user clicks on First Alert Element.");
         alertsMethods.acceptAlert();
@@ -47,18 +48,17 @@ public class AlertWindows extends BasePage {
         elementsMethods.clickElement(thirdAlertElement);
         loggerUtility.infoLog("The user clicks on Third Alert Element.");
 
-        boolean chooseAccept = true;
-        alertsMethods.acceptAlert(chooseAccept);
+        alertsMethods.acceptAlert(testData.isChooseAccept());
         loggerUtility.infoLog("The user accepts the confirmation alert.");
 
         String actualText = confirmResultText.getText();
-        alertsMethods.verifyConfirmAlert(actualText, true);
+        alertsMethods.verifyConfirmAlert(actualText, testData.isChooseAccept());
         loggerUtility.infoLog("The user verifies the confirmation result.");
 
         elementsMethods.clickElement(fourthAlertElement);
         loggerUtility.infoLog("The user clicks on Fourth Alert Element.");
 
-        alertsMethods.fillAlert("Buna");
+        alertsMethods.fillAlert(testData.getPromptText());
         loggerUtility.infoLog("The user fills the prompt alert.");
     }
 }
