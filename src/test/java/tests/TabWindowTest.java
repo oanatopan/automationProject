@@ -7,10 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import sharedData.Hooks;
 import sharedData.SharedData;
 
 
-public class TabWindowTest extends SharedData {
+public class TabWindowTest extends Hooks {
 
     ElementsMethod elementsMethod;
     TabMethods tabMethods;
@@ -20,8 +21,8 @@ public class TabWindowTest extends SharedData {
 
     public void metodaTest() {
 
-        elementsMethod = new ElementsMethod(driver);
-        tabMethods = new TabMethods(driver);
+        elementsMethod = new ElementsMethod(getDriver());
+        tabMethods = new TabMethods(getDriver());
 
         WebElement alertMenu = getDriver().findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
         elementsMethod.javaScriptElement(alertMenu);

@@ -5,9 +5,10 @@ import helpMethods.FrameMethods;
 import org.testng.annotations.Test;
 import pages.FramesPage;
 import pages.HomePage;
+import sharedData.Hooks;
 import sharedData.SharedData;
 
-public class FramesTest extends SharedData {
+public class FramesTest extends Hooks {
 
     ElementsMethod elementsMethod;
     FrameMethods frameMethods;

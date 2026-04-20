@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49161c8-4a0b-4a03-af49-cfebaec77489" name="Changes" comment="shared Data">
-      <change afterPath="$PROJECT_DIR$/RegressionSuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SmokeSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/loggerUtility/LoggerUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sharedData/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/AlertMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/ElementsMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/FrameMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpMethods/TabMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AlertWindows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ElementsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FramesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FramesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WebTablesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sharedData/SharedData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AlertTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FramesTest.java" afterDir="false" />
@@ -190,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.AlertTest" />
         <item itemvalue="TestNG.WebTableTest.metodaTest" />
         <item itemvalue="TestNG.WebTableTest" />
         <item itemvalue="TestNG.PracticeForms.metodaTest" />
-        <item itemvalue="TestNG.AlertTest" />
       </list>
     </recent_temporary>
   </component>

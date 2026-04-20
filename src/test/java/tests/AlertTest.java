@@ -5,10 +5,10 @@ import helpMethods.ElementsMethod;
 import org.testng.annotations.Test;
 import pages.AlertWindows;
 import pages.HomePage;
-import sharedData.SharedData;
+import sharedData.Hooks;
 
 
-public class AlertTest extends SharedData {
+public class AlertTest extends Hooks {
 
     ElementsMethod elementsMethod;
     AlertMethods alertMethods;
@@ -24,7 +24,7 @@ public class AlertTest extends SharedData {
         homePage.clickAlertFrameWindow();
 
         AlertWindows alertWindows = new AlertWindows(getDriver());
-        alertWindows.clickAlert();
+        alertWindows.clickAlertSubMenu();
         alertWindows.dealAlertProcess();
 
     }

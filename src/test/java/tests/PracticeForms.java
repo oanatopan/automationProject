@@ -3,10 +3,11 @@ package tests;
 import helpMethods.ElementsMethod;
 import org.openqa.selenium.*;
 import org.testng.annotations.Test;
+import sharedData.Hooks;
 import sharedData.SharedData;
 import java.util.List;
 
-public class PracticeForms extends SharedData {
+public class PracticeForms extends Hooks {
 
     ElementsMethod elementsMethod;
 
